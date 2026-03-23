@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Streamlit app",
+      "type": "python",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app/main.py"],
+      "justMyCode": true
+    },
+    {
+      "name": "Run all 15 experiments",
+      "type": "python",
+      "request": "launch",
+      "program": "mlops/run_experiments.py",
+      "args": ["--frames_dir", "data/demo_frames"],
+      "justMyCode": true
+    },
+    {
+      "name": "Baselines only",
+      "type": "python",
+      "request": "launch",
+      "program": "mlops/run_experiments.py",
+      "args": ["--frames_dir", "data/demo_frames", "--baselines_only"],
+      "justMyCode": true
+    },
+    {
+      "name": "LTC configs only",
+      "type": "python",
+      "request": "launch",
+      "program": "mlops/run_experiments.py",
+      "args": ["--frames_dir", "data/demo_frames", "--ltc_only"],
+      "justMyCode": true
+    },
+    {
+      "name": "Save demo frames",
+      "type": "python",
+      "request": "launch",
+      "program": "mlops/save_demo_frames.py",
+      "args": [
+        "--seq_dir", "/path/to/visdrone/sequence",
+        "--max_frames", "40"
+      ],
+      "justMyCode": true
+    }
+  ]
+}

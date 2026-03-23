@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+mlruns/
+*.pt
+data/demo_frames/
+models/*.json
+assets/*.gif
+assets/*.png
+.streamlit/secrets.toml
