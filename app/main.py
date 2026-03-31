@@ -52,12 +52,14 @@ with st.sidebar:
 
 # ── Route to page ─────────────────────────────────────────────────────────────
 if page == "Upload & Run":
-    from app.pages.page1_upload import render
+    from app.pages_modules.page1_upload import render
 elif page == "Live Metrics":
-    from app.pages.page2_metrics import render
+    from app.pages_modules.page2_metrics import render
 elif page == "Frame Story":
-    from app.pages.page3_framestory import render
+    from app.pages_modules.page3_framestory import render
 else:
-    from app.pages.page4_mlflow import render
+    from app.pages_modules.page4_mlflow import render
 
 render(champion)
+
+
